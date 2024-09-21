@@ -63,6 +63,8 @@ const mensagens = {
 
 function verificarCampo(campo) {
   let mensagem = "";
+  campo.style.border = "2px solid var(--azul-claro)";
+
   campo.setCustomValidity("");
   if (campo.name == "cpf" && campo.value.length >= 11) {
     ehUmCPF(campo);
@@ -81,6 +83,7 @@ function verificarCampo(campo) {
 
   if (!validadorDeinput) {
     mensagemErro.textContent = mensagem;
+    campo.style.border = "2px solid red";
   } else {
     mensagemErro.textContent = "";
   }
