@@ -81,6 +81,7 @@ function verificarCampo(campo) {
 
   if (!validadorDeinput) {
     mensagemErro.textContent = mensagem;
+    campo.style.border = "2px solid red";
   } else {
     mensagemErro.textContent = "";
   }
